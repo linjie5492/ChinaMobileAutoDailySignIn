@@ -1,5 +1,4 @@
 import requests
-from loghelper import log
 
 def main():
 	url = 'https://activity2.sh.chinamobile.com/h5/activityserver/QdActivity/commitSign?MmEwMD=5aFv5KfYTSQUPOpTB4CHBiH5SOrCPqWxu__0QGyWZjJJt72bbKSv4hTo1m5O5qNv4Yjmgw_Dp.yNtpIaGHIBmIj9k6U8owEstG9UKgrXIctPU2gNbFMOdB3z4.REkx_KEA7pTNERwx18MjMObEwyxdGaTxT86SMfyL7MD4OL5CruZ6EPglA_WoKCJ0N0aO5dziW8cn5Qx0Er8.u3c4wUS.Lx94MawwYQLO6ObS16Rnhbvk20kT5qxuu5QGAaK6HwbUTsoQNX83GsfwxUikgCNP716b94NziDm_ery5JLWyjWFU1w1rk9ud6XdGO2lpU134KI8Yq2bzWqc88gxPmwgxdwzZz_uxKK_pe54b0JVqkoTU.kMvC2BB59WyPrAS7dgR5kENgkk2mQf6e_kgWa9ZRKQfqzxRxFHLKLikoB2r8q&c1K5tw0w6_=4fnFmDUQak8bDDp72kevLnisO3zGbnAc1oiUh53feKwHYmF.snAsDjqEBY4Y7cH2CODLQFZgJNF13b71W7givIzjGokIZJVLW.YIVNwFXHBrrztD9bTvXHRufNAsAtC9XQZsWk9ny0JfisubRf93ZLG'
@@ -16,8 +15,7 @@ def main():
 	}
 
 	response = requests.post(url=url, data={}, headers=headers).json()
-	log.info(response)
-	# print(response)
+	print(response)
 
 	msg = response['X_RESULTINFO']
 	if response['X_RESULTCODE'] == 0:
@@ -37,5 +35,5 @@ def ftqq(push_message):
 if __name__ == "__main__":
 	msg = main()
 	# print(msg)
-	ftqq(msg)
+	# ftqq(msg)
 pass
